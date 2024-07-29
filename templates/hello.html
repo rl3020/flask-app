@@ -1,22 +1,135 @@
 <!-- index.html -->
 <!DOCTYPE html>
 <html>
-
 <head>
-    <title>Hello world</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Richard Lopez</title>
+    <link rel="icon" href="/static/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
 </head>
 <style>
     body {
-        padding: 0;
+        background-color: #040B16;
         box-sizing: border-box;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
+        padding: 25px;
+        margin: 0;
+        overflow-x: hidden;
     }
-
 </style>
 <body>
-    <h1>Hello, world! Made with love from Flask ❤️</h1>
-</body>
+    <img class="california" src="{{ url_for('static', filename='assets/cali.svg') }}" alt="California SVG">
 
+    <div class="hi-world-container">
+        <img class="profile-pic" src="{{ url_for('static', filename='assets/profile-pic.JPG') }}" alt="California SVG">
+        <span class="hi-world">Hi World 👋🏽</span>
+    </div>
+    <div class="visitor-box">
+        <span>This website has had <span class="unique-visitors">1</span> unique visitors.</span> 
+        <span>Check them out down <div id="world-visitors-button" class="link">here!</div></span>
+    </div>
+    
+
+    <div class="intro-container">
+        <span class="intro-text blue-box">My name's Richard Lopez</span>
+        <div class="job-container">
+            <span class="intro-text blue-box">I'm a software engineer</span>
+            <a href="https://www.google.com/search?q=news" target="_blank">
+                <span class="grey-box intro-text">@ <img class="google" src="{{ url_for('static', filename='assets/google.svg') }}" alt="Google SVG"></span>
+            </a>
+        </div>
+        <span class="intro-text blue-box">And I code things on the internet for fun :)</span>
+    </div>
+    <!-- Things i've learned -->
+    <section>
+        <span class="title-text"><span class="code-decor">&lt;/&gt;</span> Some things I’ve learned</span>
+        <div class="row">
+            <div class="item-box">
+                <img class="language-image" src="{{ url_for('static', filename='assets/python.png') }}" alt="Python SVG">
+                <span class="item-name">Python</span>
+            </div>
+            <div class="item-box">
+                <img class="language-image" style="width: 120px;" src="{{ url_for('static', filename='assets/java.png') }}" alt="java">
+                <span class="item-name">Java</span>
+            </div>
+            <div class="item-box">
+                <img class="language-image" src="{{ url_for('static', filename='assets/c.png') }}" alt="C logo">
+                <span class="item-name">C</span>
+            </div>
+            <div class="item-box">
+                <img class="language-image" src="{{ url_for('static', filename='assets/js.png') }}" alt="JS logo">
+                <span class="item-name">JS</span>
+            </div>
+            <div class="item-box">
+                <img class="language-image" src="{{ url_for('static', filename='assets/react.png') }}" alt="React logo">
+                <span class="item-name">React</span>
+            </div>
+            <div class="item-box">
+                <img class="language-image" style="width: 120px;" src="{{ url_for('static', filename='assets/html-css.png') }}" alt="html/css logo">
+                <span class="item-name">Html/CSS</span>
+            </div> 
+            <div class="item-box">
+                <img class="language-image" src="{{ url_for('static', filename='assets/django.svg') }}" alt="Django logo">
+                <span class="item-name">Django</span>
+            </div>
+            <div class="item-box">
+                <img class="language-image" src="{{ url_for('static', filename='assets/flask.png') }}" alt="Flask logo">
+                <span class="item-name">Flask</span>
+            </div>
+        </div>
+    </section>
+    <!-- Marathons-->
+    <section>
+        <span class="title-text" style="margin-top: 20px;margin-bottom: 0px;"><span style="font-size: 40px;">🏃🏽</span> Some marathons I’ve run</span>
+        <div class="row" style="gap: 20px;">
+            <div class="item-box marathon-box">
+                <img class="language-image" style="width: 120px;" src="{{ url_for('static', filename='assets/la-marathon.webp') }}" alt="Python SVG">
+                <span class="item-name">LA Marathon</span>
+            </div>
+            <div class="item-box marathon-box">
+                <img class="language-image" style="width: 120px;" src="{{ url_for('static', filename='assets/sf-marathon.png') }}"
+                    alt="java">
+                <span class="item-name">SF Marathon x 2</span>
+            </div>
+            <div class="item-box marathon-box">
+                <img class="language-image" src="{{ url_for('static', filename='assets/nyc.png') }}" alt="C logo">
+                <span class="item-name">NYC Half Marathon</span>
+            </div>
+            <div class="item-box marathon-box">
+                <img class="language-image" style="height: calc(50%); width: auto;" src="{{ url_for('static', filename='assets/bk.jpg') }}" alt="JS logo">
+                <span class="item-name">Brooklyn Go Hard or Go Home 1/2</span>
+            </div>
+        </div>
+        
+    </section>
+    <!-- YouTube-->
+    <section>
+        <span class="title-text">
+            <img style="width: 50px;" src="{{ url_for('static', filename='assets/yt.png') }}" alt="html/css logo"> 
+            My YouTube channel.<span style="font-size: 12px;">(recently started)</span></span>
+
+        <div class="row" style="gap:40px;">
+            <iframe class="video" 
+                width="560" height="315" src="https://www.youtube.com/embed/n7ukDuhnh44?si=TTU0Xu4zoEa-n1X3"
+                title="YouTube video player" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+            <iframe class="video"  
+                width="560" height="315" src="https://www.youtube.com/embed/nMgwyVeI9FU?si=byz6mQtd8n0lFXuP"
+                title="YouTube video player" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div>
+    </section>
+    <section id="world-visitors">
+        <span class="title-text" style="margin-top: 20px;margin-bottom: 0px;">
+            <span style="font-size: 40px;">🌎</span>
+            Here's where people have visited this website from!
+        </span>
+
+    </section>
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/animations.js') }}"></script>
+</body>
 </html>
